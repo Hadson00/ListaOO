@@ -4,8 +4,9 @@ class Bola:
         self.circunferencia = circunferencia
         self.material = material
 
-    def trocaCor(self):
-        self.cor = str(input('Digite uma nova cor para a bola: '))
+    def trocaCor(self, nova_cor):
+        self.cor = nova_cor
+        return nova_cor
 
     def mostraCor(self):
         print(f'A cor da bola é {self.cor}')
@@ -14,6 +15,7 @@ class Bola:
         return f'A cor da bola é {self.cor}, com {self.circunferencia}cm de circunferencia e feita de {self.material}'
 bola = Bola('Vermelha', 10, 'plastico')
 
-bola.trocaCor()
+
+bola.trocaCor(str(input('Digte uma nova cor: ')))
 bola.mostraCor()
 print(bola)

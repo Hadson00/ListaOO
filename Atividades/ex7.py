@@ -5,11 +5,11 @@ class Tamagushi:
         self.saude = saude 
         self.idade = idade 
     
-    def AltStatus(self):
-        self.nome = str(input('Digite o nome: '))
-        self.fome = int(input('Digite o nível de fome: '))
-        self.saude = int(input('Digite o nível de saúde: '))
-        self.idade = int(input('Digite a idade: '))
+    def AltStatus(self, nome, fome, saude, idade):
+        self.nome = nome
+        self.fome = fome 
+        self.saude = saude 
+        self.idade = idade
 
     def Mostrar(self):
         print(f'\nNome: {self.nome}')
@@ -20,6 +20,9 @@ class Tamagushi:
         print(f'Humor: {humor}')
     
 tamagotchi = Tamagushi('Hades',50, 30, 88)
-
-tamagotchi.AltStatus()
+nome = str(input('Digite o nome: '))
+fome = int(input('Digite o nível de fome: '))
+saude = int(input('Digite o nível de saúde: '))
+idade = int(input('Digite a idade: '))
+tamagotchi.AltStatus(nome, fome, saude, idade)
 tamagotchi.Mostrar()

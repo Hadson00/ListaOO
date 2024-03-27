@@ -3,8 +3,7 @@ class Macaco:
         self.nome = nome
         self.buchinxhei = buchinxhei
 
-    def Comer(self):
-        alimentos = str(input('Digite o alimento: '))
+    def Comer(self, alimentos):
         self.buchinxhei = ''.join(alimentos)
 
     def verBucho(self):
@@ -12,8 +11,8 @@ class Macaco:
 
     def Digerir(self):
         self.buchinxhei = None
-    
+
 masqueico1 = Macaco('Raphael', None)
 
-masqueico1.Comer()
+masqueico1.Comer(str(input('Digite o alimento: ')))
 masqueico1.verBucho()
