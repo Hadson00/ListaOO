@@ -1,16 +1,18 @@
 class Macaco:
-    def __init__(self, nome, buchinxhei):
+    def __init__(self, nome):
         self.nome = nome
-        self.buchinxhei = buchinxhei
+        self.buchinxhei = []
 
     def Comer(self, alimentos):
-        self.buchinxhei = ''.join(alimentos)
+        self.buchinxhei.append(alimentos)
 
     def verBucho(self):
-        print(self.buchinxhei)
+        for i in self.buchinxhei:
+            print(i)
 
     def Digerir(self):
-        self.buchinxhei = None
+        self.verBucho()
+        self.buchinxhei = []
 
 masqueico1 = Macaco('Raphael', None)
 
